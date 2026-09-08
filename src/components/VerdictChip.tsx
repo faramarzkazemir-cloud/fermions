@@ -14,8 +14,9 @@ export function VerdictChip({ label, value, kind }: Props) {
         : "warn");
   return (
     <span className={`chip ${k}`}>
-      <span className="dot" />
-      {label}: <strong>{value}</strong>
+      <span className="dot" aria-hidden="true" />
+      <span className="chip-label">{label}</span>
+      <strong>{value}</strong>
     </span>
   );
 }
