@@ -1,38 +1,51 @@
-# Soliton-Fermion Bound States as a Composite Prototype
+# Fermions on solitons
 
-گزارش امکان‌سنجی سولیتون–فرمیون
+Interactive demo for a staged scientific feasibility study: kink + Yukawa bound modes (1+1), soft Q-ball + Dirac bound states (3+1), and electromagnetic charge via Mechanism A.
 
-Vite + React + TypeScript + KaTeX scientific feasibility report.
+**Repo:** https://github.com/faramarzkazemir-cloud/fermions  
+**Demo branch:** `demo/polished-ui`
 
-**Date:** 8 September 2026
-
-## Verdict
+## Verdict (from the report)
 
 | Claim | Answer |
 |-------|--------|
 | Existence | **YES** |
-| Stability evidence | **YES** (not full proof) |
+| Stability evidence | **YES** (not a full proof) |
 | Electron compositeness claimed? | **No** |
 | All-neutral EM charge | **HARD NO** |
 | Mechanism A | **YES** (feasibility) |
 
-## Stages
+## Run locally
 
-1. 1+1 kink + Yukawa — JR zero mode; sets A-G (calculations/kink_yukawa/)
-2. 3+1 soft Q-ball + Yukawa — (m,A,B)=(1,1.8,1) (calculations/qball_yukawa/)
-3. EM charge — Mechanism A; thin-branch Q~1 (calculations/qball_charge/)
+```bash
+git clone https://github.com/faramarzkazemir-cloud/fermions.git
+cd fermions
+git checkout demo/polished-ui
+npm install
+npm run dev
+```
 
-## Commands
+Then open the URL Vite prints (usually `http://localhost:5173/fermions/`).
 
-Use the package manager scripts: install, then run the development server or the production build target defined in package.json.
+## Live demo (GitHub Pages)
 
-## Layout
+After this branch is merged to `main` and Pages is enabled for the repo, the site deploys from `.github/workflows/pages.yml` to:
 
-- docs/REPORT.md — full scientific narrative
-- public/figures/ — PNG figures
-- src/data/*.ts — exact stage numbers
-- calculations/{kink_yukawa,qball_yukawa,qball_charge}/ — RESULTS.md + summary.json
+`https://faramarzkazemir-cloud.github.io/fermions/`
+
+Enable Pages once: repo **Settings → Pages → Source: GitHub Actions**.
+
+## What the demo shows
+
+- Sticky nav through Intro · Stage 1 · Stage 2 · Charge · Disclaimer
+- Hero with bilingual title and verdict chips
+- Tables and cards fed only from `src/data/*` (no invented numbers)
+- Full narrative in `docs/REPORT.md`; raw outputs in `calculations/`
+
+## Stack
+
+Vite + React + TypeScript + KaTeX
 
 ## Disclaimer
 
-Mathematical/numerical feasibility only. Not a claim that the electron is composite; no full quantum stability proof; QED precision deferred. Local files only in this packaging step.
+Mathematical/numerical feasibility only. Not a claim that the electron is composite; no full quantum stability proof; QED precision deferred.
